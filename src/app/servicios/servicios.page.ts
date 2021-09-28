@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-servicios',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServiciosPage implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
+
+  goToAgendarHora(){
+    this.router.navigate(['/servicios/reserva-hora'])
+
+  }
 
   ngOnInit() {
   }
